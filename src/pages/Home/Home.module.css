@@ -1,0 +1,198 @@
+.wrapper {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+
+.home {
+  display: flex;
+  flex-direction: row;
+  color: var(--white);
+  width: 80%;
+  max-width: 1200px;
+  justify-content: space-between;
+  align-items: center;
+  padding: 40px 0;
+  gap: 40px;
+  flex-wrap: wrap;
+}
+
+.textSection {
+  flex: 1;
+  min-width: 300px;
+  gap: 25px;
+  display: flex;
+  flex-direction: column;
+}
+
+.label {
+  color: var(--primary-orange);
+  font-size: 16px;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+  /* margin-bottom: 20px; */
+  font-weight: 400;
+  line-height: 32px;
+}
+
+/* .heading {
+  font-size: 54px;
+  font-weight: 900 !important;
+  line-height: 56px;
+  letter-spacing: 2px;
+  font-weight: bold;
+} */
+.heading {
+  font-size: clamp(28px, 5vw, 54px);
+  line-height: clamp(36px, 6vw, 56px);
+  font-weight: 900;
+  letter-spacing: 2px;
+}
+.helpWithIcon {
+  position: relative;
+  display: inline-block;
+  z-index: 1;
+}
+
+.helpWithIcon::after {
+  content: "";
+  position: absolute;
+  top: -25px;
+  right: -32px;
+  width: 90px;
+  height: 90px;
+  background-image: url("../../assets/Images/Star.png");
+  background-size: contain;
+  background-repeat: no-repeat;
+  z-index: -1;
+  pointer-events: none;
+}
+
+.subText {
+  color: var(--white-a3);
+  font-weight: 400;
+  font-size: clamp(14px, 2vw, 16px);
+  line-height: clamp(24px, 4vw, 32px);
+  letter-spacing: 0px;
+  width: 70%;
+  opacity: 64%;
+}
+
+.actions {
+  margin: 20px 0 50px 0;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 16px;
+}
+
+.primaryButton {
+  text-transform: uppercase !important;
+  line-height: 100%;
+  letter-spacing: 0px;
+  background-color: var(--primary-orange) !important;
+  font-weight: 900 !important;
+  font-size: clamp(12px, 1.8vw, 14px) !important;
+  padding: 12px 24px !important;
+  width: auto;
+}
+
+.contactLink {
+  color: var(--white);
+  font-size: 16px;
+  align-self: center;
+  font-weight: 400;
+  line-height: 32px;
+  letter-spacing: 0px;
+  text-decoration: none;
+}
+
+.testimonial {
+  display: flex;
+  align-items: center;
+  /* margin-top: 50px; */
+  gap: 30px;
+}
+
+.testimonial > img {
+  width: 50px;
+  border-radius: 50%;
+  /* margin-right: 10px; */
+}
+
+.testimonial p {
+  font-size: 16px;
+  color: var(--white-a3);
+  /* margin: 0; */
+  font-weight: 400;
+  line-height: 32px;
+  letter-spacing: 0px;
+  opacity: 64%;
+}
+
+.testimonial span {
+  display: block;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 32px;
+  letter-spacing: 0px;
+  color: #ffffff;
+}
+
+.visualSection {
+  flex: 1;
+  min-width: 300px;
+  text-align: center;
+}
+
+.visualSection img {
+  width: 100%;
+  max-width: 500px;
+}
+
+/* Responsive Styles */
+@media (max-width: 1024px) {
+  .heading {
+    font-size: 40px;
+    line-height: 48px;
+  }
+
+  .subText {
+    font-size: 15px;
+    line-height: 26px;
+  }
+}
+
+@media (max-width: 768px) {
+  .home {
+    flex-direction: column;
+    text-align: center;
+    align-items: center;
+    width: 100%;
+  }
+
+  .heading {
+    font-size: 32px;
+    line-height: 40px;
+  }
+
+  .textSection {
+    align-items: center;
+  }
+
+  .starIcon {
+    top: -6px;
+    right: -18px;
+    width: 16px;
+    height: 16px;
+  }
+
+  .actions {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .primaryButton {
+    width: 100%;
+    padding: 12px !important;
+  }
+}

@@ -1,0 +1,137 @@
+.pricingSection {
+  padding: 4rem 2rem;
+  background-color: #fff0eb;
+  font-family: "Epilogue", sans-serif;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.pricingPlans {
+  width: 80%;
+  max-width: 1200px;
+  display: flex;
+  flex-direction: column;
+  /* gap: 60px; */
+  /* display: ; */
+}
+.headingLabel {
+  color: #ef6d58;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 32px;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+  margin-bottom: 0.5rem;
+}
+
+.headingTitle {
+  color: #391400;
+  font-weight: 800;
+  font-size: 56px;
+  line-height: 64px;
+  letter-spacing: -1px;
+  margin-bottom: 3rem;
+}
+
+.cardContainer {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  /* gap: 2rem; */
+}
+
+.card {
+  flex: 1 1 300px;
+  padding: 2rem;
+  border-radius: 12px;
+  background-color: #ffffff;
+  box-shadow: 0px 4px 10px rgba(117, 56, 24, 0.05);
+  border: 1px solid transparent;
+  transition: 0.3s ease;
+}
+
+.card.popular {
+  position: relative;
+  background-color: #ffffff;
+  z-index: 2;
+}
+
+.popularBadge {
+  position: absolute;
+  top: -1rem;
+  left: 1rem;
+  background-color: #ef6d58;
+  color: #ffffff;
+  font-size: 14px;
+  padding: 4px 12px;
+  border-radius: 20px;
+}
+
+.card.highlight {
+  border: 1px solid #ef6d58;
+}
+
+.cardTitle {
+  color: #ef6d58;
+  font-weight: 400;
+  font-size: 16px;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+  margin-bottom: 0.5rem;
+}
+
+.price {
+  font-weight: 800;
+  font-size: 40px;
+  line-height: 48px;
+  color: #391400;
+  margin: 0.5rem 0;
+}
+
+.cardDescription {
+  font-size: 16px;
+  line-height: 32px;
+  color: rgba(57, 20, 0, 0.64);
+  margin-bottom: 1.5rem;
+}
+
+.features {
+  list-style: none;
+  padding: 0;
+  margin-bottom: 1.5rem;
+}
+
+.featureItem {
+  font-size: 16px;
+  line-height: 32px;
+  color: #391400;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.featureItem.inactive {
+  color: rgba(57, 20, 0, 0.64);
+}
+
+.contactButton {
+  background-color: #ef6d58;
+  color: #ffffff;
+  font-weight: 700;
+  padding: 0.75rem 2rem;
+  border-radius: 6px;
+  border: none;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+
+.contactButton.white {
+  background-color: #ffffff;
+  color: #391400;
+  box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.contactButton:hover {
+  background-color: #d75e4e;
+}
