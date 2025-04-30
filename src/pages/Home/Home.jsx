@@ -3,7 +3,6 @@ import styles from "./Home.module.css";
 import { Button } from "@mui/material";
 import HomeImg from "../../assets/Images/Home.png";
 import Profile from "../../assets/Images/Profile.png";
-import Star from "../../assets/Images/Star.png";
 
 export default function Home() {
   return (
@@ -14,7 +13,7 @@ export default function Home() {
           <h1 className={styles.heading}>
             We’re <span className={styles.helpWithIcon}>Help</span>
             <br />
-            To Build Your <br /> Dream Project
+            To Build Your Dream Project
           </h1>
 
           <p className={styles.subText}>

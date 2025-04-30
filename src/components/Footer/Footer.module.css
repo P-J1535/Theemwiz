@@ -1,0 +1,133 @@
+.footer {
+  background-color: #fff1ec;
+  padding: 40px 24px;
+  font-family: "Epilogue", sans-serif;
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+  width: 100%;
+  align-items: center;
+  justify-content: center;
+}
+.footerMain {
+  width: 80%;
+  display: flex;
+  flex-direction: column;
+  max-width: 1200px;
+}
+.topSection {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 32px;
+  align-items: flex-start;
+  padding-bottom: 60px;
+}
+
+.leftColumn {
+  flex: 1 1 100px;
+}
+
+.logo {
+  font-weight: 700;
+  font-size: 24px;
+  line-height: 32px;
+  color: #391400;
+}
+
+.centerColumn {
+  display: flex;
+  flex: 2;
+  gap: 48px;
+  flex-wrap: wrap;
+}
+
+.column {
+  min-width: 120px;
+}
+
+.heading {
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 32px;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+  color: #ef6d58;
+  margin-bottom: 8px;
+}
+
+.link {
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 32px;
+  color: #391400;
+  cursor: pointer;
+}
+
+.rightColumn {
+  display: flex;
+  gap: 16px;
+  align-items: center;
+}
+
+.icon {
+  width: 48px;
+  height: 48px;
+  background-color: #ef6d58;
+  color: white;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+}
+
+.bottomSection {
+  border-top: 1px solid #f3d1bf;
+  padding-top: 24px;
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+.copy {
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 32px;
+  color: rgba(57, 20, 0, 0.64);
+}
+
+.policyLinks {
+  display: flex;
+  gap: 24px;
+}
+
+.policy {
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 32px;
+  color: #391400;
+  cursor: pointer;
+}
+
+/* ✅ Responsive */
+@media screen and (max-width: 768px) {
+  .topSection {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .centerColumn {
+    flex-direction: column;
+    gap: 24px;
+  }
+
+  .bottomSection {
+    flex-direction: column;
+    gap: 8px;
+  }
+
+  .policyLinks {
+    justify-content: flex-start;
+  }
+}

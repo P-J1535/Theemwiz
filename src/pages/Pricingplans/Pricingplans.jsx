@@ -1,9 +1,11 @@
 import React from "react";
 import styles from "./Pricingplans.module.css";
+import AddIcon from "@mui/icons-material/Add";
+import RemoveIcon from "@mui/icons-material/Remove";
 
 const PricingPlans = [
   {
-    title: "CONSULTATION",
+    title: "Consultation",
     price: "Free",
     description:
       "Your digital marketing efforts, instead of handling in-house.",
@@ -12,11 +14,11 @@ const PricingPlans = [
       { text: "Market Analysis", active: false },
       { text: "Production", active: false },
     ],
-    buttonColor: "#ffffff",
+    buttonColor: "white",
     isPopular: false,
   },
   {
-    title: "DESIGN",
+    title: "Design",
     price: "$1500",
     description:
       "Provide your business with a variety of digital solutions to promote.",
@@ -25,11 +27,11 @@ const PricingPlans = [
       { text: "Market Analysis", active: true },
       { text: "Production", active: false },
     ],
-    buttonColor: "#EF6D58",
+    buttonColor: "orange",
     isPopular: true,
   },
   {
-    title: "DESIGN+CODE",
+    title: "Design+Code",
     price: "$2900",
     description: "Help you hit your marketing goals and grow your business.",
     features: [
@@ -37,7 +39,7 @@ const PricingPlans = [
       { text: "Market Analysis", active: true },
       { text: "Production", active: true },
     ],
-    buttonColor: "#ffffff",
+    buttonColor: "white",
     isPopular: false,
   },
 ];
@@ -62,32 +64,41 @@ const Pricingplans = () => {
               {plan.isPopular && (
                 <span className={styles.popularBadge}>Popular</span>
               )}
-              <div>
-                <p className={styles.cardTitle}>{plan.title}</p>
-                <h3 className={styles.price}>{plan.price}</h3>
-                <p className={styles.cardDescription}>{plan.description}</p>
 
-                <ul className={styles.features}>
-                  {plan.features.map((feature, i) => (
-                    <li
-                      key={i}
-                      className={`${styles.featureItem} ${
-                        !feature.active ? styles.inactive : ""
-                      }`}
-                    >
-                      + {feature.text}
-                    </li>
-                  ))}
-                </ul>
+              <p className={styles.cardTitle}>{plan.title}</p>
+              <h3 className={styles.price}>{plan.price}</h3>
+              <p className={styles.cardDescription}>{plan.description}</p>
 
-                <button
-                  className={`${styles.contactButton} ${
-                    plan.buttonColor === "#ffffff" ? styles.white : ""
-                  }`}
-                >
-                  Contact Us
-                </button>
-              </div>
+              <ul className={styles.features}>
+                {plan.features.map((feature, i) => (
+                  <li
+                    key={i}
+                    className={`${styles.featureItem} ${
+                      !feature.active ? styles.inactive : ""
+                    }`}
+                  >
+                    {/* <AddIcon className={styles.featureIcon} />
+                    <span>{feature.text}</span> */}
+
+                    <div className={styles.featureIconWrapper}>
+                      {feature.active ? (
+                        <AddIcon className={styles.featureIcon} />
+                      ) : (
+                        <RemoveIcon className={styles.featureIcon} />
+                      )}
+                      <span>{feature.text}</span>
+                    </div>
+                  </li>
+                ))}
+              </ul>
+
+              <button
+                className={`${styles.contactButton} ${
+                  plan.buttonColor === "white" ? styles.white : ""
+                }`}
+              >
+                Contact Us
+              </button>
             </div>
           ))}
         </div>

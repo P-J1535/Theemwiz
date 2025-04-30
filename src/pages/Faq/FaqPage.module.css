@@ -1,0 +1,100 @@
+/* FaqPage.module.css */
+
+.faqWrapper {
+  display: flex;
+  gap: 48px;
+  padding: 64px 0;
+  background: #fff1ec;
+  font-family: "Epilogue", sans-serif;
+  flex-wrap: wrap;
+  width: 100%;
+  align-items: center;
+  justify-content: center;
+}
+
+.faq {
+  width: 80%;
+  display: flex;
+
+  max-width: 1200px;
+}
+
+.faqLeft {
+  max-width: 400px;
+}
+
+.faqLabel {
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 32px;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+  color: #ef6d58;
+}
+
+.faqTitle {
+  font-weight: 800;
+  font-size: 40px;
+  line-height: 48px;
+  color: #391400;
+  margin: 16px 0;
+}
+
+.faqDescription {
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 32px;
+  color: rgba(57, 20, 0, 0.64);
+}
+
+.contactLink {
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 32px;
+  color: #391400;
+  margin-top: 16px;
+  cursor: pointer;
+}
+.accordion {
+  background: #fff1ec;
+  border: none;
+  box-shadow: none;
+  margin: 0;
+  padding: 0;
+  border: 1px solid #f3d1bf;
+}
+
+.expandedAccordion {
+  background-color: #ffffff !important;
+}
+
+.summary {
+  padding: 16px 0;
+  margin: 0;
+}
+
+.details {
+  padding: 0 0 16px 0;
+  margin: 0;
+}
+
+.faqRight {
+  flex: 1;
+  min-width: 300px;
+  display: flex;
+  flex-direction: column;
+}
+
+.question {
+  font-weight: 700;
+  font-size: 24px;
+  line-height: 32px;
+  color: #391400;
+}
+
+.answer {
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 32px;
+  color: rgba(57, 20, 0, 0.64);
+}

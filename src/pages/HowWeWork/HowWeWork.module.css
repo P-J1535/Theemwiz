@@ -192,24 +192,34 @@
     text-align: center;
     align-items: center;
   }
-
+  .videoMain {
+    flex-direction: column;
+    gap: 40px;
+  }
   .title {
     font-size: 32px;
     line-height: 40px;
   }
-
+  .stepItem {
+    /* align-items: flex-start; */
+    /* justify-content: flex-start; */
+    text-align: left;
+  }
   .stepNumber {
     font-size: 56px;
     line-height: 64px;
   }
 
-  .videoImage {
-    width: 100%;
-    height: auto;
+  .videoImageWrapper {
+    width: 329px;
+    height: 212px;
   }
 
   .textSection,
   .videoTextSection {
     max-width: 100%;
+    /* justify-content: flex-start; */
+    /* align-items: flex-start; */
+    text-align: left;
   }
 }

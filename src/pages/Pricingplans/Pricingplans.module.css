@@ -2,136 +2,166 @@
   padding: 4rem 2rem;
   background-color: #fff0eb;
   font-family: "Epilogue", sans-serif;
-  width: 100%;
   display: flex;
-  flex-direction: column;
-  align-items: center;
+  justify-content: center;
 }
+
 .pricingPlans {
-  width: 80%;
+  width: 100%;
   max-width: 1200px;
-  display: flex;
-  flex-direction: column;
-  /* gap: 60px; */
-  /* display: ; */
+  text-align: left;
 }
+
 .headingLabel {
   color: #ef6d58;
-  font-weight: 400;
-  font-size: 16px;
-  line-height: 32px;
-  letter-spacing: 3px;
+  font-size: 14px;
+  font-weight: 500;
   text-transform: uppercase;
+  letter-spacing: 2px;
   margin-bottom: 0.5rem;
 }
 
 .headingTitle {
   color: #391400;
+  font-size: 48px;
   font-weight: 800;
-  font-size: 56px;
-  line-height: 64px;
-  letter-spacing: -1px;
+  line-height: 1.2;
   margin-bottom: 3rem;
 }
 
 .cardContainer {
   display: flex;
   flex-wrap: wrap;
-  justify-content: space-between;
-  /* gap: 2rem; */
+  gap: 1.5rem;
 }
 
 .card {
-  flex: 1 1 300px;
+  flex: 1;
+  min-width: 200px;
+  /* background: white; */
   padding: 2rem;
   border-radius: 12px;
-  background-color: #ffffff;
-  box-shadow: 0px 4px 10px rgba(117, 56, 24, 0.05);
+  box-shadow: 0 4px 10px rgba(117, 56, 24, 0.05);
+  position: relative;
+  transition: transform 0.3s ease;
   border: 1px solid transparent;
-  transition: 0.3s ease;
+  border: 1px solid #f3d1bf;
+  gap: 20px;
+  display: flex;
+  flex-direction: column;
+  transition:
+    transform 0.3s ease,
+    background-color 0.3s ease;
 }
 
-.card.popular {
-  position: relative;
-  background-color: #ffffff;
+.card:hover {
+  transform: translateY(-45px);
+  background-color: #ffff;
+}
+
+.card:hover .contactButton {
+  background-color: #ef6d58 !important;
+  color: white;
+}
+
+.popular {
   z-index: 2;
+}
+
+.highlight {
+  /* border: 1px solid #ef6d58; */
 }
 
 .popularBadge {
   position: absolute;
-  top: -1rem;
+  top: 10px;
   left: 1rem;
   background-color: #ef6d58;
-  color: #ffffff;
-  font-size: 14px;
-  padding: 4px 12px;
+  color: white;
+  font-size: 12px;
+  font-weight: 600;
+  padding: 8px 10px;
   border-radius: 20px;
-}
-
-.card.highlight {
-  border: 1px solid #ef6d58;
 }
 
 .cardTitle {
   color: #ef6d58;
-  font-weight: 400;
-  font-size: 16px;
-  letter-spacing: 3px;
+  font-size: 14px;
+  font-weight: 500;
   text-transform: uppercase;
+  letter-spacing: 2px;
   margin-bottom: 0.5rem;
+  padding-top: 1.2rem;
 }
 
 .price {
+  font-size: 36px;
   font-weight: 800;
-  font-size: 40px;
-  line-height: 48px;
   color: #391400;
-  margin: 0.5rem 0;
+  margin-bottom: 0.5rem;
 }
 
 .cardDescription {
-  font-size: 16px;
-  line-height: 32px;
+  font-size: 15px;
   color: rgba(57, 20, 0, 0.64);
+  line-height: 1.8;
   margin-bottom: 1.5rem;
+  width: 85%;
 }
 
 .features {
   list-style: none;
   padding: 0;
-  margin-bottom: 1.5rem;
+  /* margin-bottom: 1.5rem; */
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
 }
-
 .featureItem {
-  font-size: 16px;
-  line-height: 32px;
-  color: #391400;
   display: flex;
   align-items: center;
-  gap: 0.5rem;
+  gap: 10px;
+  font-size: 15px;
+  color: #391400;
 }
 
-.featureItem.inactive {
-  color: rgba(57, 20, 0, 0.64);
+.inactive {
+  color: rgba(57, 20, 0, 0.5);
+}
+
+.featureIconWrapper {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.featureIcon {
+  background-color: #ef6d58;
+  color: white;
+  border-radius: 50%;
+  font-size: 18px !important;
+  padding: 4px;
 }
 
 .contactButton {
-  background-color: #ef6d58;
-  color: #ffffff;
-  font-weight: 700;
   padding: 0.75rem 2rem;
-  border-radius: 6px;
+  font-size: 14px;
+  font-weight: 700;
   border: none;
+  border-radius: 6px;
+  background-color: #fff;
+  color: #391400;
   cursor: pointer;
-  transition: background 0.3s;
+  transition: background-color 0.3s ease;
 }
 
 .contactButton.white {
-  background-color: #ffffff;
+  background-color: #fff;
   color: #391400;
-  box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
 }
 
 .contactButton:hover {
   background-color: #d75e4e;
+  color: #ffff;
 }

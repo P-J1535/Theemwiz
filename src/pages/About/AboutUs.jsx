@@ -1,7 +1,6 @@
 import React from "react";
 import styles from "./AboutUs.module.css";
 
-// Replace with your actual image imports
 import Bitmap from "../../assets/Images/Bitmap.png";
 import Bitmap1 from "../../assets/Images/Bitmap1.png";
 import Bitmap2 from "../../assets/Images/Bitmap2.png";
@@ -20,9 +19,13 @@ const AboutUs = () => {
           <img src={Bitmap3} alt="Fuzion" />
           <img src={Bitmap5} alt="MediaFury" />
         </div>
+
         <div className={styles.underline}></div>
+
         <div className={styles.contentSection}>
-          <img className={styles.imageBlock} src={Office} alt="Office" />
+          <div className={styles.imageBlock}>
+            <img src={Office} alt="Office" />
+          </div>
 
           <div className={styles.textBlock}>
             <h5 className={styles.aboutLabel}>About</h5>
@@ -39,7 +42,6 @@ const AboutUs = () => {
           </div>
         </div>
 
-        {/* Bottom Stats Section */}
         <div className={styles.statsSection}>
           <div className={styles.statBox}>
             <h2>42%</h2>
@@ -50,7 +52,7 @@ const AboutUs = () => {
             <p>Agency members</p>
           </div>
           <div className={styles.statBox}>
-            <h2>5.000</h2>
+            <h2>5,000</h2>
             <p>Projects complete</p>
           </div>
         </div>
