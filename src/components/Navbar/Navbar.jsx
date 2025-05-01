@@ -21,10 +21,10 @@ const Navbar = () => {
 
   const navItems = [
     // { label: "Home", path: "/" },
-    { label: "About", path: "/" },
-    { label: "Services", path: "/services" },
+    { label: "About", path: "/about-us" },
+    { label: "Services", path: "/latest-work" },
     { label: "Pricing", path: "/pricing" },
-    { label: "Blog", path: "/blog" },
+    { label: "Blog", path: "/how-we-work" },
   ];
 
   return (
@@ -44,9 +44,11 @@ const Navbar = () => {
         </div>
 
         {/* Contact Button */}
-        <Button variant="outlined" className={styles.contact}>
-          Contact
-        </Button>
+        <Link to="/contact">
+          <Button variant="outlined" className={styles.contact}>
+            Contact
+          </Button>
+        </Link>
 
         {/* Hamburger Icon for Mobile */}
         {/* Hamburger Icon for Mobile */}

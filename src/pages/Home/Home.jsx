@@ -3,6 +3,7 @@ import styles from "./Home.module.css";
 import { Button } from "@mui/material";
 import HomeImg from "../../assets/Images/Home.png";
 import Profile from "../../assets/Images/Profile.png";
+import { Link } from "react-router-dom";
 
 export default function Home() {
   return (
@@ -21,12 +22,14 @@ export default function Home() {
             design, business understanding.
           </p>
           <div className={styles.actions}>
-            <Button variant="contained" className={styles.primaryButton}>
-              How We Work
-            </Button>
-            <a className={styles.contactLink} href="#">
+            <Link to="/how-we-work">
+              <Button variant="contained" className={styles.primaryButton}>
+                How We Work
+              </Button>
+            </Link>
+            <Link to="/contact" className={styles.contactLink}>
               Contact Us
-            </a>
+            </Link>
           </div>
           <div className={styles.testimonial}>
             <img src={Profile} alt="user" />

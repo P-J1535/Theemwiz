@@ -7,7 +7,6 @@ const HowWeWork = () => {
   return (
     <section className={styles.container}>
       <div className={styles.contentWrapper}>
-        {/* Top Section */}
         <div className={styles.introSection}>
           <div className={styles.textSection}>
             <p className={styles.label}>How We Work</p>
@@ -45,7 +44,6 @@ const HowWeWork = () => {
 
         <div className={styles.divider}></div>
 
-        {/* Video Section */}
         <div className={styles.videoMain}>
           <div className={styles.videoImageWrapper}>
             <img
@@ -66,9 +64,7 @@ const HowWeWork = () => {
           </div>
           <div className={styles.videoTextSection}>
             <p className={styles.label}>Video Reel</p>
-            <h2 className={styles.title}>
-              Unlock The Greatest <br /> Value Possible
-            </h2>
+            <h2 className={styles.title}>Unlock The Greatest Value Possible</h2>
             <p className={styles.description}>
               Design, business understanding, ability to put themselves in the
               merchant's shoes meant to partner.

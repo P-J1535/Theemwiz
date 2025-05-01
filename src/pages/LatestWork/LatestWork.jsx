@@ -16,28 +16,38 @@ const LatestWork = () => {
           <span className={styles.filter}>
             Show All <span className={styles.count}>14</span>
           </span>
-          <span className={styles.filter}>
-            Design <span className={styles.count}>6</span>
-          </span>
-          <span className={styles.filter}>
-            Branding <span className={styles.count}>4</span>
-          </span>
-          <span className={styles.filter}>
-            Illustration <span className={styles.count}>3</span>
-          </span>
-          <span className={styles.filter}>
-            Motion <span className={styles.count}>1</span>
-          </span>
+
+          <div className={styles.desktopFilters}>
+            <span className={styles.filter}>
+              Design <span className={styles.count}>6</span>
+            </span>
+            <span className={styles.filter}>
+              Branding <span className={styles.count}>4</span>
+            </span>
+            <span className={styles.filter}>
+              Illustration <span className={styles.count}>3</span>
+            </span>
+            <span className={styles.filter}>
+              Motion <span className={styles.count}>1</span>
+            </span>
+          </div>
+
+          <div className={styles.mobileDropdown}>
+            <select className={styles.dropdown}>
+              <option value="">Show All</option>
+              <option value="design">Design (6)</option>
+              <option value="branding">Branding (4)</option>
+              <option value="illustration">Illustration (3)</option>
+              <option value="motion">Motion (1)</option>
+            </select>
+          </div>
         </div>
 
         <div className={styles.imageGrid}>
           <div className={styles.card}>
             <img src={Portfolio1} alt="SOFA" className={styles.image} />
             <span className={styles.tag}>Design</span>
-            <h3 className={styles.title}>
-              SOFA
-              {/* <span className={styles.author}>ARCHIE VORA</span> */}
-            </h3>
+            <h3 className={styles.title}>SOFA</h3>
           </div>
           <div className={styles.cardLarge}>
             <img src={Portfolio2} alt="KeyBoard" className={styles.image} />

@@ -1,5 +1,3 @@
-/* FaqPage.module.css */
-
 .faqWrapper {
   display: flex;
   gap: 48px;
@@ -15,7 +13,7 @@
 .faq {
   width: 80%;
   display: flex;
-
+  gap: 120px;
   max-width: 1200px;
 }
 
@@ -97,4 +95,54 @@
   font-size: 16px;
   line-height: 32px;
   color: rgba(57, 20, 0, 0.64);
+}
+@media (max-width: 768px) {
+  .faq {
+    flex-direction: column;
+    gap: 30px;
+  }
+
+  .faqLeft {
+    max-width: 100%;
+    margin-bottom: 32px;
+  }
+
+  .faqTitle {
+    font-size: 32px;
+    line-height: 40px;
+  }
+
+  .faqDescription,
+  .contactLink {
+    font-size: 14px;
+    line-height: 24px;
+  }
+
+  .faqRight {
+    width: 100%;
+  }
+
+  .question {
+    font-size: 18px;
+    line-height: 28px;
+  }
+
+  .answer {
+    font-size: 14px;
+    line-height: 24px;
+  }
+
+  .accordion {
+    background: #ffffff;
+    border: 1px solid #f3d1bf;
+    overflow: hidden;
+  }
+
+  .summary {
+    padding: 16px;
+  }
+
+  .details {
+    padding: 0 16px 16px;
+  }
 }

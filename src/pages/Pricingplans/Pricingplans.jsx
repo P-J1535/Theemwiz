@@ -2,6 +2,7 @@ import React from "react";
 import styles from "./Pricingplans.module.css";
 import AddIcon from "@mui/icons-material/Add";
 import RemoveIcon from "@mui/icons-material/Remove";
+import { Link } from "react-router-dom";
 
 const PricingPlans = [
   {
@@ -49,9 +50,7 @@ const Pricingplans = () => {
     <div className={styles.pricingSection}>
       <div className={styles.pricingPlans}>
         <p className={styles.headingLabel}>Pricing</p>
-        <h2 className={styles.headingTitle}>
-          Check Our <br /> Pricing Plans
-        </h2>
+        <h2 className={styles.headingTitle}>Check Our Pricing Plans</h2>
 
         <div className={styles.cardContainer}>
           {PricingPlans.map((plan, idx) => (
@@ -77,9 +76,6 @@ const Pricingplans = () => {
                       !feature.active ? styles.inactive : ""
                     }`}
                   >
-                    {/* <AddIcon className={styles.featureIcon} />
-                    <span>{feature.text}</span> */}
-
                     <div className={styles.featureIconWrapper}>
                       {feature.active ? (
                         <AddIcon className={styles.featureIcon} />
@@ -92,13 +88,15 @@ const Pricingplans = () => {
                 ))}
               </ul>
 
-              <button
-                className={`${styles.contactButton} ${
-                  plan.buttonColor === "white" ? styles.white : ""
-                }`}
-              >
-                Contact Us
-              </button>
+              <Link to="/contact">
+                <button
+                  className={`${styles.contactButton} ${
+                    plan.buttonColor === "white" ? styles.white : ""
+                  }`}
+                >
+                  Contact Us
+                </button>
+              </Link>
             </div>
           ))}
         </div>

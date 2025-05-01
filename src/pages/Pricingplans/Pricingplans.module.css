@@ -27,6 +27,7 @@
   font-weight: 800;
   line-height: 1.2;
   margin-bottom: 3rem;
+  width: 30%;
 }
 
 .cardContainer {
@@ -38,7 +39,6 @@
 .card {
   flex: 1;
   min-width: 200px;
-  /* background: white; */
   padding: 2rem;
   border-radius: 12px;
   box-shadow: 0 4px 10px rgba(117, 56, 24, 0.05);
@@ -66,10 +66,6 @@
 
 .popular {
   z-index: 2;
-}
-
-.highlight {
-  /* border: 1px solid #ef6d58; */
 }
 
 .popularBadge {
@@ -112,7 +108,6 @@
 .features {
   list-style: none;
   padding: 0;
-  /* margin-bottom: 1.5rem; */
   display: flex;
   flex-direction: column;
   gap: 20px;
@@ -127,6 +122,7 @@
 
 .inactive {
   color: rgba(57, 20, 0, 0.5);
+  opacity: 64%;
 }
 
 .featureIconWrapper {
@@ -164,4 +160,25 @@
 .contactButton:hover {
   background-color: #d75e4e;
   color: #ffff;
+}
+
+@media (max-width: 768px) {
+  .headingTitle {
+    font-size: 40px;
+    line-height: 48px;
+    width: 90%;
+  }
+  .headingLabel {
+    padding-bottom: 20px;
+  }
+  .cardDescription {
+    width: 100%;
+  }
+  .card {
+    padding-top: 50px;
+  }
+
+  .popularBadge {
+    top: 20px;
+  }
 }

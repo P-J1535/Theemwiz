@@ -1,4 +1,3 @@
-/* Root container */
 .container {
   background-color: #28293e;
   padding: 100px 16px;
@@ -17,7 +16,6 @@
   gap: 60px;
 }
 
-/* Top texts */
 .portfolio {
   font-family: "Epilogue", sans-serif;
   font-size: 16px;
@@ -39,7 +37,6 @@
   margin: 0;
 }
 
-/* Filter bar */
 .filterBar {
   display: flex;
   flex-wrap: wrap;
@@ -61,20 +58,19 @@
   margin-left: 6px;
 }
 
-/* Image grid */
 .imageGrid {
   display: flex;
   flex-wrap: wrap;
   gap: 32px;
   width: 100%;
   max-width: 1400px;
-  align-items: stretch; /* ensures uniform height */
+  align-items: stretch;
 }
 
 .card,
 .cardLarge,
 .cardLargeFade {
-  height: 400px; /* same height */
+  height: 400px;
   position: relative;
   border-radius: 6px;
   overflow: hidden;
@@ -83,25 +79,23 @@
 }
 
 .card {
-  width: 35%; /* adjust as needed */
+  width: 35%;
 }
-
 .cardLarge {
-  width: 60%; /* takes more space */
+  width: 60%;
 }
 
 .cardLargeFade {
-  width: 60%; /* slightly smaller */
+  width: 60%;
 }
 
 .image {
   width: 100%;
   height: 100%;
-  object-fit: cover; /* ensures cropping while keeping uniform height */
+  object-fit: cover;
   display: block;
 }
 
-/* Tag styles */
 .tag,
 .tagDark {
   position: absolute;
@@ -116,12 +110,6 @@
   z-index: 2;
 }
 
-/* .tagDark {
-  background-color: #ef6d58;
-  color: #ffffff;
-} */
-
-/* Card title */
 .title {
   position: absolute;
   bottom: 24px;
@@ -140,9 +128,8 @@
   opacity: 0.6;
 }
 
-/* Explore More button */
 .exploreBtn {
-  margin: 0 auto; /* centers the button */
+  margin: 0 auto;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -162,13 +149,49 @@
 }
 
 .exploreBtn:hover {
-  background-color: #ef6d58; /* button changes color on hover */
+  background-color: #ef6d58;
   color: #ffffff;
   transform: scale(1.05);
   box-shadow: 0 4px 12px rgba(239, 109, 88, 0.4);
 }
+.desktopFilters {
+  display: flex;
+  gap: 24px;
+}
 
-/* Responsive Design */
+.mobileDropdown {
+  display: none;
+  width: 100%;
+  padding: 0 16px;
+}
+
+.dropdown {
+  width: 100%;
+  padding: 12px 16px;
+  font-family: "Epilogue", sans-serif;
+  font-size: 16px;
+  font-weight: 500;
+  border-radius: 8px;
+  border: 1px solid #ddd;
+  background-color: #ffffff;
+  color: #391400;
+  appearance: none;
+  background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 140 140' xmlns='http://www.w3.org/2000/svg'%3E%3Cpolygon points='70,100 100,40 40,40' fill='%23391400'/%3E%3C/svg%3E");
+  background-repeat: no-repeat;
+  background-position: right 16px center;
+  background-size: 12px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+  transition:
+    border-color 0.2s ease,
+    box-shadow 0.2s ease;
+}
+
+.dropdown:focus {
+  outline: none;
+  border-color: #ef6d58;
+  box-shadow: 0 0 0 2px rgba(239, 109, 88, 0.2);
+}
+
 @media (max-width: 1200px) {
   .imageGrid {
     grid-template-columns: repeat(2, 1fr);
@@ -198,11 +221,39 @@
     gap: 12px;
   }
   @media (max-width: 768px) {
+    .portfoliomain {
+      width: 80%;
+      gap: 20px;
+    }
     .card,
     .cardLarge,
     .cardLargeFade {
       width: 100%;
       height: 280px;
+    }
+
+    .filterBar {
+      flex-direction: column;
+      align-items: center;
+      gap: 16px;
+    }
+
+    .filterBar .filter:not(:first-child) {
+      display: none;
+    }
+
+    .dropdownWrapper {
+      display: block;
+    }
+    .desktopFilters {
+      display: none;
+    }
+
+    .mobileDropdown {
+      display: block;
+    }
+    .exploreBtn {
+      margin-top: 40px;
     }
   }
 }
