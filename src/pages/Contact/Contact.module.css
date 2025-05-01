@@ -24,6 +24,23 @@
   top: 22%;
   left: 15%;
 }
+.thankYou {
+  margin-top: 12px;
+  color: green;
+  font-weight: bold;
+  font-size: 14px;
+}
+.errorWrapper {
+  height: 16px; /* Reserve space even if error is not shown */
+  margin-bottom: 8px;
+}
+
+.error {
+  color: red;
+  font-size: 12px;
+  line-height: 16px;
+  margin: 0;
+}
 
 .heading {
   font-family: "Epilogue", sans-serif;

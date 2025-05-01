@@ -4,6 +4,7 @@ import AccordionSummary from "@mui/material/AccordionSummary";
 import AccordionDetails from "@mui/material/AccordionDetails";
 import ExpandMoreIcon from "@mui/icons-material/ExpandMore";
 import styles from "./FaqPage.module.css";
+import { Link } from "react-router-dom";
 
 const faqData = [
   {
@@ -47,7 +48,9 @@ const FaqPage = () => {
             A digital agency is a business you hire to outsource your digital
             marketing efforts, instead of handling in-house.
           </p>
-          <p className={styles.contactLink}>Contact Us</p>
+          <Link to="/contact" style={{ textDecoration: "none" }}>
+            <p className={styles.contactLink}>Contact Us</p>
+          </Link>
         </div>
 
         <div className={styles.faqRight}>

@@ -11,8 +11,10 @@ import {
 import MenuIcon from "@mui/icons-material/Menu";
 import { Link } from "react-router-dom";
 import NavLogo from "../../assets/Images/logo.png";
+import { useLocation } from "react-router-dom";
 
 const Navbar = () => {
+  const location = useLocation();
   const [open, setOpen] = useState(false);
 
   const toggleDrawer = (state) => () => {
@@ -20,7 +22,7 @@ const Navbar = () => {
   };
 
   const navItems = [
-    // { label: "Home", path: "/" },
+    { label: "Home", path: "/" },
     { label: "About", path: "/about-us" },
     { label: "Services", path: "/latest-work" },
     { label: "Pricing", path: "/pricing" },
@@ -34,37 +36,42 @@ const Navbar = () => {
           <img className={styles.logo} src={NavLogo} alt="Nav-Logo" />
         </Link>
 
-        {/* Desktop Links */}
         <div className={styles.desktopLinks}>
           {navItems.map((item) => (
-            <Link key={item.path} to={item.path} className={styles.link}>
+            <Link
+              key={item.path}
+              to={item.path}
+              className={`${styles.link} ${
+                location.pathname === item.path ? styles.active : ""
+              }`}
+            >
               {item.label}
             </Link>
           ))}
         </div>
 
-        {/* Contact Button */}
         <Link to="/contact">
           <Button variant="outlined" className={styles.contact}>
             Contact
           </Button>
         </Link>
-
-        {/* Hamburger Icon for Mobile */}
-        {/* Hamburger Icon for Mobile */}
         <div className={styles.menuIcon}>
           <IconButton onClick={toggleDrawer(true)} color="inherit">
             <MenuIcon style={{ color: "white" }} />
           </IconButton>
         </div>
 
-        {/* Drawer for Mobile Links */}
         <Drawer anchor="right" open={open} onClose={toggleDrawer(false)}>
           <div className={styles.drawer}>
             <List>
               {navItems.map((item) => (
                 <ListItem button key={item.path} onClick={toggleDrawer(false)}>
-                  <Link to={item.path} className={styles.drawerLink}>
+                  <Link
+                    to={item.path}
+                    className={`${styles.drawerLink} ${
+                      location.pathname === item.path ? styles.active : ""
+                    }`}
+                  >
                     <ListItemText primary={item.label} />
                   </Link>
                 </ListItem>

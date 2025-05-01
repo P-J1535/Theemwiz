@@ -199,7 +199,8 @@
   }
 
   .title {
-    font-size: 32px;
+    font-size: 24px;
+    line-height: 32px;
   }
 }
 
@@ -254,6 +255,9 @@
     }
     .exploreBtn {
       margin-top: 40px;
+    }
+    .container {
+      padding: 100px 0;
     }
   }
 }

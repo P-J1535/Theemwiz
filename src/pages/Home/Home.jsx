@@ -13,7 +13,6 @@ export default function Home() {
           <p className={styles.label}>Modern Studio</p>
           <h1 className={styles.heading}>
             We’re <span className={styles.helpWithIcon}>Help</span>
-            <br />
             To Build Your Dream Project
           </h1>
 
